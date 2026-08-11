@@ -1,0 +1,11 @@
+{
+  "name": "exercicio-exb200fundamentoscss",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "bash scripts/run_tests.sh"
+  },
+  "devDependencies": {
+    "playwright": "^1.49.0"
+  }
+}

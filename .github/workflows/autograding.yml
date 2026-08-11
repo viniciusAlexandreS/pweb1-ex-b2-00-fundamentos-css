@@ -1,0 +1,36 @@
+name: Corretor automatico
+
+# Roda a cada envio do aluno e tambem sob demanda (aba Actions -> Run workflow).
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+# Se o aluno enviar varias vezes seguidas, cancela as execucoes anteriores.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  corrigir:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Baixar o codigo do aluno
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Instalar dependencias
+        run: npm ci || npm install
+
+      - name: Instalar o navegador (Chromium)
+        run: npx playwright install --with-deps chromium
+
+      - name: Rodar o corretor
+        run: |
+          chmod +x scripts/run_tests.sh
+          ./scripts/run_tests.sh

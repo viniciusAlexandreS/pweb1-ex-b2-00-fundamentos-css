@@ -1,0 +1,46 @@
+/* Estilize o "Cartão de perfil". Edite só este arquivo. Veja o README.
+   Você vai praticar: seletores (elemento, classe, id), box model e cores/texto.
+
+   Lembre da SINTAXE:  seletor { propriedade: valor; }   (não esqueça o ; no fim!)
+
+   Alvos disponíveis no HTML:
+     #topo   (o cabeçalho)         -> seletor de id     (#)
+     h1      (o título)            -> seletor de elemento
+     .cargo  (o parágrafo do cargo)-> seletor de classe (.)
+     .cartao (o cartão)            -> seletor de classe (.)
+     .btn    (o botão "Seguir")    -> seletor de classe (.)
+
+   Requisitos (veja o README para os pontos):
+     [básico] body  -> uma cor de fundo (background-color)
+     [básico] #topo -> uma cor de fundo (background-color)
+     [médio ] h1    -> centralizado (text-align: center)
+     [básico] .cargo-> negrito (font-weight: bold) OU itálico (font-style: italic)
+     [básico] .cartao -> padding (espaço interno)
+     [médio ] .cartao -> border (uma borda)
+     [médio ] .cartao -> margin (espaço externo)
+     [básico] .btn  -> cor de fundo (background-color)
+*/
+
+body {
+  /* TODO: background-color */
+}
+
+#topo {
+  /* TODO: background-color */
+}
+
+h1 {
+  /* TODO: text-align: center */
+}
+
+.cargo {
+  /* TODO: font-weight: bold OU font-style: italic */
+}
+
+.cartao {
+  /* TODO: padding, border e margin */
+}
+
+.btn {
+  /* TODO: background-color */
+}
