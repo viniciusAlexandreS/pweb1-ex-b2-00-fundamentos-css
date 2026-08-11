@@ -44,7 +44,7 @@ h1 {
 .cartao {
   /* TODO: padding, border e margin */
   padding: 2rem;
-  border: 3rem;
+  border: 32px;
   margin: 2rem;
 
 }
